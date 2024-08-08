@@ -1,5 +1,7 @@
 const currentForecast = document.querySelector('#current-forecast');
 let createEl = document.createElement('h2');
+let sunnyContainer = document.querySelector('.sunny-container')
+let rainyContainer = document.querySelector('.rainy-container')
 
 
         async function getWeather() {
@@ -37,12 +39,24 @@ let createEl = document.createElement('h2');
                 currentForecast.appendChild(createEl);
                 createEl.textContent = `Today's weather in ${name} is ${weather[0].description}.`
                 console.log('working');
-                
-               
-            
+                            
             };
 
             createContent();
+
+            if (weather[0].description ===  'clear sky' ) {
+
+                sunnyContainer.setAttribute('style', 'display:flex');
+
+                
+            } 
+            
+            // if  (weather[0].description === 'shower rain' || 'rain' || 'thunderstorm' || 'mist') {
+
+            //     rainyContainer.setAttribute('style', 'display:flex');
+
+
+            // }
             
         }
 

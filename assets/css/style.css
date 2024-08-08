@@ -22,7 +22,10 @@ header {
     padding: 20px;
 }
 
-.cloudy-container {
+.rainy-container,
+.sunny-container, 
+.cloudy-container, 
+.winter-container {
     display: flex;
     justify-content: center;
 }
