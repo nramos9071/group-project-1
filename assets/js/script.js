@@ -3,7 +3,7 @@ const container = document.getElementById('#playlist-container');
 
 // Create function to call on input weather conditions
 const createDiv = document.createElement('div');
-const currentWeather = 
+// const currentWeather = 
 
 
 
