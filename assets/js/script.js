@@ -1,5 +1,7 @@
+
 const currentForecast = document.querySelector('#current-forecast');
 let createEl = document.createElement('h2');
+
 
 
         async function getWeather() {

@@ -1,3 +1,7 @@
+* {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
 body {
     background-color: rgb(3, 16, 31);
     color: white;
@@ -6,6 +10,25 @@ body {
 header {
     background-color: rgb(9, 53, 104);
     color: white;
+
+}
+
+h1 {
+    padding: 20px;
+}
+
+#h1div {
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    justify-content: center;
+}
+
+#weatherbox {
+    display: flex;
+    flex-wrap: wrap;  
+    width: 100%;
+    justify-content: center;
 }
 
 #current-forecast {
