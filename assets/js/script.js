@@ -3,6 +3,8 @@ const currentForecast = document.querySelector('#current-forecast');
 let createEl = document.createElement('h2');
 let sunnyContainer = document.querySelector('.sunny-container')
 let rainyContainer = document.querySelector('.rainy-container')
+let cloudyContainer = document.querySelector('.cloudy-container')
+let winterContainer = document.querySelector('.winter-container')
 
 
 
@@ -46,14 +48,19 @@ let rainyContainer = document.querySelector('.rainy-container')
 
             createContent();
 
-            if (weather[0].description ===  'clear sky' ) {
+            const sunnyWeather = ['clear sky', 'few clouds', ]
+
+            if (weather[0].description ===  'clear sky' || weather[0].description === 'few clouds' ) {
 
                 sunnyContainer.setAttribute('style', 'display:flex');
+                rainyContainer.setAttribute('style', 'display:none');
+                cloudyContainer.setAttribute('style', 'display:none');
+                winterContainer.setAttribute('style', 'display:none');
 
                 
             } 
             
-            // if  (weather[0].description === 'shower rain' || 'rain' || 'thunderstorm' || 'mist') {
+            // if  (weather[0].description === 'shower rain' || weather[0].description === 'rain' || 'thunderstorm' || 'mist') {
 
             //     rainyContainer.setAttribute('style', 'display:flex');
 
