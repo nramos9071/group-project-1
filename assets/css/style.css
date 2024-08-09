@@ -111,15 +111,11 @@ h1 {
     justify-content: center;
 }
 
-.main-playlist {
-    border-radius:12px;
-    width: 100px;
-    height: 400px;
-    padding: 100px;
+.sunny-background {
+    background-color: rgb(3, 127, 143);
+
 }
 
-#spotify-player {
-    width: 300px;
-    height: 380px;
-    margin: 0 auto;
+.sunny-header {
+    background-color: rgb(165, 165, 4);
 }
