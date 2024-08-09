@@ -50,7 +50,7 @@ let winterContainer = document.querySelector('.winter-container')
 
             const sunnyWeather = ['clear sky', 'few clouds', ]
 
-            if (weather[0].description ===  'clear sky' || weather[0].description === 'few clouds' ) {
+            if (weather[0].description ===  'clear sky' || weather[0].description === 'few clouds') {
 
                 sunnyContainer.setAttribute('style', 'display:flex');
                 rainyContainer.setAttribute('style', 'display:none');
@@ -60,12 +60,22 @@ let winterContainer = document.querySelector('.winter-container')
                 
             } 
             
-            // if  (weather[0].description === 'shower rain' || weather[0].description === 'rain' || 'thunderstorm' || 'mist') {
+            if  (weather[0].description === 'shower rain' || weather[0].description === 'rain' || weather[0].description === 'thunderstorm' || weather[0].description === 'mist') {
 
-            //     rainyContainer.setAttribute('style', 'display:flex');
+                rainyContainer.setAttribute('style', 'display:flex');
+                cloudyContainer.setAttribute('style', 'display:none');
+                winterContainer.setAttribute('style', 'display:none');
+                sunnyContainer.setAttribute('style', 'display:none');
+            }
 
+            if  (weather[0].description === 'broken clouds' || weather[0].description === 'scattered clouds') {
 
-            // }
+                rainyContainer.setAttribute('style', 'display:none');
+                cloudyContainer.setAttribute('style', 'display:flex');
+                winterContainer.setAttribute('style', 'display:none');
+                sunnyContainer.setAttribute('style', 'display:none');
+            }
+
             
         }
 
