@@ -5,6 +5,9 @@ let sunnyContainer = document.querySelector('.sunny-container')
 let rainyContainer = document.querySelector('.rainy-container')
 let cloudyContainer = document.querySelector('.cloudy-container')
 let winterContainer = document.querySelector('.winter-container')
+const baseBackground = document.querySelector('.base-background')
+const baseHeader = document.querySelector('.base-header')
+
 
 
 
@@ -96,7 +99,7 @@ document.getElementById("preferencesForm").onsubmit = function(event) {
 
             createContent();
 
-            const sunnyWeather = ['clear sky', 'few clouds', ]
+            
 
             if (weather[0].description ===  'clear sky' || weather[0].description === 'few clouds') {
 
@@ -104,6 +107,13 @@ document.getElementById("preferencesForm").onsubmit = function(event) {
                 rainyContainer.setAttribute('style', 'display:none');
                 cloudyContainer.setAttribute('style', 'display:none');
                 winterContainer.setAttribute('style', 'display:none');
+                baseBackground.setAttribute('class', 'sunny-background');
+                baseHeader.setAttribute('class', 'sunny-header');
+             
+                
+                
+                
+                
 
                 
             } 
@@ -116,7 +126,7 @@ document.getElementById("preferencesForm").onsubmit = function(event) {
                 sunnyContainer.setAttribute('style', 'display:none');
             }
 
-            if  (weather[0].description === 'broken clouds' || weather[0].description === 'scattered clouds') {
+            if  (weather[0].description === 'broken clouds' || weather[0].description === 'scattered clouds' || weather[0].description === 'overcast clouds') {
 
                 rainyContainer.setAttribute('style', 'display:none');
                 cloudyContainer.setAttribute('style', 'display:flex');
