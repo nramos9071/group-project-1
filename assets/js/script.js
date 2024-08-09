@@ -26,6 +26,54 @@ let winterContainer = document.querySelector('.winter-container')
             }
         }
 
+        // Get modal elements
+var modal = document.getElementById("preferencesModal");
+var btn = document.getElementById("notFeelingThisBtn");
+var span = document.getElementsByClassName("close")[0];
+var cancelBtn = document.getElementById("cancelBtn");
+
+// Open modal on button click
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// Close modal on 'X' click
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Close modal on cancel button click
+cancelBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+// Enable the text input if 'Other' is selected
+document.querySelectorAll('input[name="reason"]').forEach(function(elem) {
+    elem.addEventListener('change', function() {
+        if (this.value === "Other") {
+            document.querySelector('input[name="otherReason"]').disabled = false;
+        } else {
+            document.querySelector('input[name="otherReason"]').disabled = true;
+        }
+    });
+});
+
+// form submission
+document.getElementById("preferencesForm").onsubmit = function(event) {
+    event.preventDefault();
+    // You can add your logic to handle the form data here
+    alert("Preferences updated!");
+    modal.style.display = "none";
+}
+
+
         function displayWeather(data) {
             const weatherDiv = document.getElementById('weather');
             const { main, name, weather } = data;

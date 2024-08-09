@@ -16,8 +16,40 @@
           <div id="weatherbox">
           <input type="text" id="city" placeholder="Enter city name">
           <button onclick="getWeather()">Get Weather</button></div>
-          <button id="not-feelin-this">Not Feeling This</button>
           <div id="weather"></div>
+           <!-- Trigger Button -->
+    <button id="notFeelingThisBtn">Not Feeling This</button>
+     <!-- Modal -->
+    <div id="preferencesModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Update Your Music Preferences</h2>
+            <p>Tell us what you didn't like.</p>
+
+            <!-- Form -->
+            <form id="preferencesForm">
+                <label>Why didn’t you like this song?</label><br>
+                <input type="radio" name="reason" value="Not my taste"> Not my taste<br>
+                <input type="radio" name="reason" value="Heard it too many times"> Heard it too many times<br>
+                <input type="radio" name="reason" value="Don’t like the artist"> Don’t like the artist<br>
+                <input type="radio" name="reason" value="Other"> Other<br>
+                <input type="text" name="otherReason" placeholder="Please specify" disabled><br><br>
+
+                <label>Would you like to hear less of this genre?</label><br>
+                <input type="radio" name="lessGenre" value="Yes"> Yes<br>
+                <input type="radio" name="lessGenre" value="No"> No<br><br>
+
+                <label>Would you prefer more of the following?</label><br>
+                <input type="checkbox" name="morePreference" value="Similar genres"> Similar genres<br>
+                <input type="checkbox" name="morePreference" value="Different genres"> Different genres<br>
+                <input type="checkbox" name="morePreference" value="More new releases"> More new releases<br>
+                <input type="checkbox" name="morePreference" value="More of my favorites"> More of my favorites<br><br>
+
+                <button type="submit">Update Preferences</button>
+                <button type="button" id="cancelBtn">Cancel</button>
+            </form>
+        </div>
+    </div>
 
 
         </header>
