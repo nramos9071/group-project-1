@@ -75,7 +75,13 @@ let winterContainer = document.querySelector('.winter-container')
                 winterContainer.setAttribute('style', 'display:none');
                 sunnyContainer.setAttribute('style', 'display:none');
             }
+            if  (weather[0].description === 'snow') {
 
+                rainyContainer.setAttribute('style', 'display:none');
+                cloudyContainer.setAttribute('style', 'display:none');
+                winterContainer.setAttribute('style', 'display:flex');
+                sunnyContainer.setAttribute('style', 'display:none');
+            }
             
         }
 
