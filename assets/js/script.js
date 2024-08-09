@@ -41,9 +41,9 @@ btn.onclick = function() {
 }
 
 // Close modal on 'X' click
-span.onclick = function() {
-    modal.style.display = "none";
-}
+// span.onclick = function() {
+//     modal.style.display = "none";
+// }
 
 // Close modal on cancel button click
 cancelBtn.onclick = function() {
