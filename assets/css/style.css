@@ -119,3 +119,11 @@ h1 {
 .sunny-header {
     background-color: rgb(165, 165, 4);
 }
+
+.rainy-background {
+    background-color:rgb(13, 27, 42);
+}
+
+.rainy-header {
+    background-color:rgb(136, 136, 136);
+}
