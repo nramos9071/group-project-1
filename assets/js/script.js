@@ -112,6 +112,7 @@ document.getElementById("preferencesForm").onsubmit = function(event) {
                 baseBackground.setAttribute('class', 'sunny-background');
                 baseHeader.setAttribute('class', 'sunny-header');
              
+
                 
                 
                 
@@ -126,6 +127,8 @@ document.getElementById("preferencesForm").onsubmit = function(event) {
                 cloudyContainer.setAttribute('style', 'display:none');
                 winterContainer.setAttribute('style', 'display:none');
                 sunnyContainer.setAttribute('style', 'display:none');
+                baseBackground.setAttribute('class', 'rainy-background');
+                baseHeader.setAttribute('class', 'rainy-header');
             }
 
             if  (weather[0].description === 'broken clouds' || weather[0].description === 'scattered clouds' || weather[0].description === 'overcast clouds') {
