@@ -7,6 +7,7 @@ let cloudyContainer = document.querySelector('.cloudy-container')
 let winterContainer = document.querySelector('.winter-container')
 const baseBackground = document.querySelector('.base-background')
 const baseHeader = document.querySelector('.base-header')
+const playlistHeader = document.querySelector('.playlist-header')
 
 
 
@@ -93,6 +94,7 @@ document.getElementById("preferencesForm").onsubmit = function(event) {
     
                 currentForecast.appendChild(createEl);
                 createEl.textContent = `Today's weather in ${name} is ${weather[0].description}.`
+                playlistHeader.setAttribute('style', 'display:flex')
                 console.log('working');
                             
             };
@@ -147,15 +149,15 @@ document.getElementById("preferencesForm").onsubmit = function(event) {
 
         
 
-const apiKey = '7a0fbe2742fb17dd43551428d82f00d1';
-const city = 'London'; // Specify the city for which you want to fetch weather data
+// const apiKey = '7a0fbe2742fb17dd43551428d82f00d1';
+// const city = 'London'; // Specify the city for which you want to fetch weather data
 
-fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`)
-  .then(response => response.json())
-  .then(data => {
-    console.log(data); // Display the weather data in the console
-  })
-  .catch(error => {
-    console.error('Error fetching data:', error);
-  });
+// fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`)
+//   .then(response => response.json())
+//   .then(data => {
+//     console.log(data); // Display the weather data in the console
+//   })
+//   .catch(error => {
+//     console.error('Error fetching data:', error);
+//   });
 
