@@ -127,3 +127,11 @@ h1 {
 .rainy-header {
     background-color:rgb(136, 136, 136);
 }
+
+.cloudy-background {
+    background-color:rgb(29, 39, 50);
+}
+
+.cloudy-header {
+    background-color:rgb(47, 12, 94);
+}

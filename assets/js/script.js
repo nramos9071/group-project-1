@@ -114,14 +114,10 @@ document.getElementById("preferencesForm").onsubmit = function(event) {
              
 
                 
-                
-                
-                
-
-                
             } 
             
-            if  (weather[0].description === 'shower rain' || weather[0].description === 'rain' || weather[0].description === 'thunderstorm' || weather[0].description === 'mist') {
+            // if  (weather[0].description === 'shower rain' || weather[0].description === 'rain' || weather[0].description === 'thunderstorm' || weather[0].description === 'mist') {
+            if   (weather[0].main === 'Rain' || weather[0].main === 'Thunderstorm' || weather[0].main === 'Drizzle') {
 
                 rainyContainer.setAttribute('style', 'display:flex');
                 cloudyContainer.setAttribute('style', 'display:none');
@@ -137,8 +133,10 @@ document.getElementById("preferencesForm").onsubmit = function(event) {
                 cloudyContainer.setAttribute('style', 'display:flex');
                 winterContainer.setAttribute('style', 'display:none');
                 sunnyContainer.setAttribute('style', 'display:none');
+                baseBackground.setAttribute('class', 'cloudy-background');
+                baseHeader.setAttribute('class', 'cloudy-header');
             }
-            if  (weather[0].description === 'snow') {
+            if  (weather[0].main === 'Snow') {
 
                 rainyContainer.setAttribute('style', 'display:none');
                 cloudyContainer.setAttribute('style', 'display:none');
