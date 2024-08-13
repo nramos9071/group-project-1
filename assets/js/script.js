@@ -77,6 +77,62 @@ document.getElementById("preferencesForm").onsubmit = function(event) {
     modal.style.display = "none";
 }
 
+document.querySelector('.dropdown-menu').addEventListener('click', function(event) { 
+
+    const weatherDescriptionDataAttribute = event.target.getAttribute('data-weather')
+    const weather = [{description:weatherDescriptionDataAttribute}]
+
+    displayPlaylist(weather);
+  
+
+} )
+
+function displayPlaylist(weather) {
+const description = weather[0].description
+const main = weather[0].main
+
+            
+    if (description ===  'clear sky' || description === 'few clouds' || description === 'sunny') {
+
+        sunnyContainer.setAttribute('style', 'display:flex');
+        rainyContainer.setAttribute('style', 'display:none');
+        cloudyContainer.setAttribute('style', 'display:none');
+        winterContainer.setAttribute('style', 'display:none');
+        baseBackground.setAttribute('class', 'sunny-background');
+        baseHeader.setAttribute('class', 'sunny-header');
+     
+
+        
+    } 
+    
+    // if  (weather[0].description === 'shower rain' || weather[0].description === 'rain' || weather[0].description === 'thunderstorm' || weather[0].description === 'mist') {
+    if   (main === 'Rain' || main === 'Thunderstorm' || main === 'Drizzle' || description === 'rainy') {
+
+        rainyContainer.setAttribute('style', 'display:flex');
+        cloudyContainer.setAttribute('style', 'display:none');
+        winterContainer.setAttribute('style', 'display:none');
+        sunnyContainer.setAttribute('style', 'display:none');
+        baseBackground.setAttribute('class', 'rainy-background');
+        baseHeader.setAttribute('class', 'rainy-header');
+    }
+
+    if  (description === 'broken clouds' || description === 'scattered clouds' || description === 'overcast clouds' || description === 'cloudy') {
+
+        rainyContainer.setAttribute('style', 'display:none');
+        cloudyContainer.setAttribute('style', 'display:flex');
+        winterContainer.setAttribute('style', 'display:none');
+        sunnyContainer.setAttribute('style', 'display:none');
+        baseBackground.setAttribute('class', 'cloudy-background');
+        baseHeader.setAttribute('class', 'cloudy-header');
+    }
+    if  (main === 'Snow' || description === 'snowy') {
+
+        rainyContainer.setAttribute('style', 'display:none');
+        cloudyContainer.setAttribute('style', 'display:none');
+        winterContainer.setAttribute('style', 'display:flex');
+        sunnyContainer.setAttribute('style', 'display:none');
+    }
+}
 
         function displayWeather(data) {
             const weatherDiv = document.getElementById('weather');
@@ -103,48 +159,9 @@ document.getElementById("preferencesForm").onsubmit = function(event) {
 
             
 
-            if (weather[0].description ===  'clear sky' || weather[0].description === 'few clouds') {
-
-                sunnyContainer.setAttribute('style', 'display:flex');
-                rainyContainer.setAttribute('style', 'display:none');
-                cloudyContainer.setAttribute('style', 'display:none');
-                winterContainer.setAttribute('style', 'display:none');
-                baseBackground.setAttribute('class', 'sunny-background');
-                baseHeader.setAttribute('class', 'sunny-header');
-             
-
-                
-            } 
-            
-            // if  (weather[0].description === 'shower rain' || weather[0].description === 'rain' || weather[0].description === 'thunderstorm' || weather[0].description === 'mist') {
-            if   (weather[0].main === 'Rain' || weather[0].main === 'Thunderstorm' || weather[0].main === 'Drizzle') {
-
-                rainyContainer.setAttribute('style', 'display:flex');
-                cloudyContainer.setAttribute('style', 'display:none');
-                winterContainer.setAttribute('style', 'display:none');
-                sunnyContainer.setAttribute('style', 'display:none');
-                baseBackground.setAttribute('class', 'rainy-background');
-                baseHeader.setAttribute('class', 'rainy-header');
-            }
-
-            if  (weather[0].description === 'broken clouds' || weather[0].description === 'scattered clouds' || weather[0].description === 'overcast clouds') {
-
-                rainyContainer.setAttribute('style', 'display:none');
-                cloudyContainer.setAttribute('style', 'display:flex');
-                winterContainer.setAttribute('style', 'display:none');
-                sunnyContainer.setAttribute('style', 'display:none');
-                baseBackground.setAttribute('class', 'cloudy-background');
-                baseHeader.setAttribute('class', 'cloudy-header');
-            }
-            if  (weather[0].main === 'Snow') {
-
-                rainyContainer.setAttribute('style', 'display:none');
-                cloudyContainer.setAttribute('style', 'display:none');
-                winterContainer.setAttribute('style', 'display:flex');
-                sunnyContainer.setAttribute('style', 'display:none');
-            }
-            
+         displayPlaylist(weather);   
         }
+
 
         
 
