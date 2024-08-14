@@ -103,6 +103,11 @@ h1 {
     padding: 20px;
 }
 
+.opening-container {
+    display: flex;
+    justify-content: center;
+}
+
 .rainy-container,
 .sunny-container, 
 .cloudy-container, 
@@ -134,6 +139,7 @@ h1 {
 
 .winter-header {
     background-color:rgb(4, 210, 247);
+}
 
 .cloudy-background {
     background-color:rgb(29, 39, 50);

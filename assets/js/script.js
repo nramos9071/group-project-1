@@ -1,13 +1,18 @@
 
 const currentForecast = document.querySelector('#current-forecast');
 let createEl = document.createElement('h2');
-let sunnyContainer = document.querySelector('.sunny-container')
-let rainyContainer = document.querySelector('.rainy-container')
-let cloudyContainer = document.querySelector('.cloudy-container')
-let winterContainer = document.querySelector('.winter-container')
-const baseBackground = document.querySelector('.base-background')
-const baseHeader = document.querySelector('.base-header')
-const playlistHeader = document.querySelector('.playlist-header')
+let sunnyContainer = document.querySelector('.sunny-container');
+let rainyContainer = document.querySelector('.rainy-container');
+let cloudyContainer = document.querySelector('.cloudy-container');
+let winterContainer = document.querySelector('.winter-container');
+let dustContainer = document.querySelector('.dust-container');
+let hazeContainer = document.querySelector('.haze-container');
+let foggyContainer = document.querySelector('.foggy-container')
+let warningContainer = document.querySelector('.warning-container');
+const baseBackground = document.querySelector('.base-background');
+const baseHeader = document.querySelector('.base-header');
+const playlistHeader = document.querySelector('.playlist-header');
+const openingHeader = document.querySelector('.opening-container');
 
 
 
@@ -93,11 +98,17 @@ const main = weather[0].main
 
             
     if (description ===  'clear sky' || description === 'few clouds' || description === 'sunny') {
-
+        
+        openingHeader.setAttribute( 'style', 'display:none');
+        playlistHeader.setAttribute('style', 'display:flex');
         sunnyContainer.setAttribute('style', 'display:flex');
         rainyContainer.setAttribute('style', 'display:none');
         cloudyContainer.setAttribute('style', 'display:none');
         winterContainer.setAttribute('style', 'display:none');
+        dustContainer.setAttribute('style', 'display:none');
+        hazeContainer.setAttribute('style', 'display:none');
+        foggyContainer.setAttribute('style', 'display:none');
+        warningContainer.setAttribute('style', 'display:none');
         baseBackground.setAttribute('class', 'sunny-background');
         baseHeader.setAttribute('class', 'sunny-header');
      
@@ -108,30 +119,115 @@ const main = weather[0].main
     // if  (weather[0].description === 'shower rain' || weather[0].description === 'rain' || weather[0].description === 'thunderstorm' || weather[0].description === 'mist') {
     if   (main === 'Rain' || main === 'Thunderstorm' || main === 'Drizzle' || description === 'rainy') {
 
+        openingHeader.setAttribute( 'style', 'display:none');
+        playlistHeader.setAttribute('style', 'display:flex');
         rainyContainer.setAttribute('style', 'display:flex');
         cloudyContainer.setAttribute('style', 'display:none');
         winterContainer.setAttribute('style', 'display:none');
         sunnyContainer.setAttribute('style', 'display:none');
+        dustContainer.setAttribute('style', 'display:none');
+        hazeContainer.setAttribute('style', 'display:none');
+        foggyContainer.setAttribute('style', 'display:none');
+        warningContainer.setAttribute('style', 'display:none');
         baseBackground.setAttribute('class', 'rainy-background');
         baseHeader.setAttribute('class', 'rainy-header');
     }
 
     if  (description === 'broken clouds' || description === 'scattered clouds' || description === 'overcast clouds' || description === 'cloudy') {
 
+        openingHeader.setAttribute( 'style', 'display:none');
+        playlistHeader.setAttribute('style', 'display:flex');
         rainyContainer.setAttribute('style', 'display:none');
         cloudyContainer.setAttribute('style', 'display:flex');
         winterContainer.setAttribute('style', 'display:none');
         sunnyContainer.setAttribute('style', 'display:none');
+        dustContainer.setAttribute('style', 'display:none');
+        hazeContainer.setAttribute('style', 'display:none');
+        foggyContainer.setAttribute('style', 'display:none');
+        warningContainer.setAttribute('style', 'display:none');
         baseBackground.setAttribute('class', 'cloudy-background');
         baseHeader.setAttribute('class', 'cloudy-header');
+        
     }
     if  (main === 'Snow' || description === 'snowy') {
 
+        openingHeader.setAttribute( 'style', 'display:none');
+        playlistHeader.setAttribute('style', 'display:flex');
         rainyContainer.setAttribute('style', 'display:none');
         cloudyContainer.setAttribute('style', 'display:none');
         winterContainer.setAttribute('style', 'display:flex');
         sunnyContainer.setAttribute('style', 'display:none');
+        dustContainer.setAttribute('style', 'display:none');
+        hazeContainer.setAttribute('style', 'display:none');
+        foggyContainer.setAttribute('style', 'display:none');
+        warningContainer.setAttribute('style', 'display:none');
     }
+
+    if  (description === 'smoke' || description === 'volcanic ash' || description === 'tornado' || description === 'warning') {
+
+        openingHeader.setAttribute( 'style', 'display:none');
+        playlistHeader.setAttribute('style', 'display:none');
+        rainyContainer.setAttribute('style', 'display:none');
+        cloudyContainer.setAttribute('style', 'display:none');
+        winterContainer.setAttribute('style', 'display:none');
+        sunnyContainer.setAttribute('style', 'display:none');
+        dustContainer.setAttribute('style', 'display:none');
+        hazeContainer.setAttribute('style', 'display:none');
+        foggyContainer.setAttribute('style', 'display:none');
+        warningContainer.setAttribute('style', 'display:flex');
+        baseBackground.setAttribute('class', 'cloudy-background');
+        baseHeader.setAttribute('class', 'cloudy-header');
+    }
+
+    if  (description === 'dust') {
+
+        openingHeader.setAttribute( 'style', 'display:none');
+        playlistHeader.setAttribute('style', 'display:flex');
+        rainyContainer.setAttribute('style', 'display:none');
+        cloudyContainer.setAttribute('style', 'display:none');
+        winterContainer.setAttribute('style', 'display:none');
+        sunnyContainer.setAttribute('style', 'display:none');
+        dustContainer.setAttribute('style', 'display:flex');
+        hazeContainer.setAttribute('style', 'display:none');
+        foggyContainer.setAttribute('style', 'display:none');
+        warningContainer.setAttribute('style', 'display:none');
+        baseBackground.setAttribute('class', 'cloudy-background');
+        baseHeader.setAttribute('class', 'cloudy-header');
+    }
+
+    if  (description === 'haze') {
+
+        openingHeader.setAttribute( 'style', 'display:none');
+        playlistHeader.setAttribute('style', 'display:flex');
+        rainyContainer.setAttribute('style', 'display:none');
+        cloudyContainer.setAttribute('style', 'display:none');
+        winterContainer.setAttribute('style', 'display:none');
+        sunnyContainer.setAttribute('style', 'display:none');
+        dustContainer.setAttribute('style', 'display:none');
+        hazeContainer.setAttribute('style', 'display:flex');
+        foggyContainer.setAttribute('style', 'display:none');
+        warningContainer.setAttribute('style', 'display:none');
+        baseBackground.setAttribute('class', 'cloudy-background');
+        baseHeader.setAttribute('class', 'cloudy-header');
+    }
+
+    if  (description === 'mist' || description === 'fog') {
+
+        openingHeader.setAttribute( 'style', 'display:none');
+        playlistHeader.setAttribute('style', 'display:flex');
+        rainyContainer.setAttribute('style', 'display:none');
+        cloudyContainer.setAttribute('style', 'display:none');
+        winterContainer.setAttribute('style', 'display:none');
+        sunnyContainer.setAttribute('style', 'display:none');
+        dustContainer.setAttribute('style', 'display:none');
+        hazeContainer.setAttribute('style', 'display:none');
+        foggyContainer.setAttribute('style', 'display:flex');
+        warningContainer.setAttribute('style', 'display:none');
+        baseBackground.setAttribute('class', 'cloudy-background');
+        baseHeader.setAttribute('class', 'cloudy-header');
+    }
+
+
 }
 
         function displayWeather(data) {
