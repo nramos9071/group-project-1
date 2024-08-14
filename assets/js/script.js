@@ -1,4 +1,3 @@
-
 const currentForecast = document.querySelector('#current-forecast');
 let createEl = document.createElement('h2');
 let sunnyContainer = document.querySelector('.sunny-container');
@@ -13,8 +12,6 @@ const baseBackground = document.querySelector('.base-background');
 const baseHeader = document.querySelector('.base-header');
 const playlistHeader = document.querySelector('.playlist-header');
 const openingHeader = document.querySelector('.opening-container');
-
-
 
 
         async function getWeather() {
@@ -116,7 +113,6 @@ const main = weather[0].main
         
     } 
     
-    // if  (weather[0].description === 'shower rain' || weather[0].description === 'rain' || weather[0].description === 'thunderstorm' || weather[0].description === 'mist') {
     if   (main === 'Rain' || main === 'Thunderstorm' || main === 'Drizzle' || description === 'rainy') {
 
         openingHeader.setAttribute( 'style', 'display:none');
@@ -255,23 +251,7 @@ const main = weather[0].main
 
             
 
-         displayPlaylist(weather);   
+         displayPlaylist(weather); 
+
         }
-
-
-        
-
-        
-
-// const apiKey = '7a0fbe2742fb17dd43551428d82f00d1';
-// const city = 'London'; // Specify the city for which you want to fetch weather data
-
-// fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`)
-//   .then(response => response.json())
-//   .then(data => {
-//     console.log(data); // Display the weather data in the console
-//   })
-//   .catch(error => {
-//     console.error('Error fetching data:', error);
-//   });
-
+   
