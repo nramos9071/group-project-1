@@ -1,5 +1,6 @@
 const currentForecast = document.querySelector('#current-forecast');
 let createEl = document.createElement('h2');
+let notFeelingThisBtn = document.querySelector('#notFeelingThisBtn')
 let sunnyContainer = document.querySelector('.sunny-container');
 let rainyContainer = document.querySelector('.rainy-container');
 let cloudyContainer = document.querySelector('.cloudy-container');
@@ -108,6 +109,7 @@ const main = weather[0].main
         warningContainer.setAttribute('style', 'display:none');
         baseBackground.setAttribute('class', 'sunny-background');
         baseHeader.setAttribute('class', 'sunny-header');
+        notFeelingThisBtn.setAttribute('style', 'display:flex')
      
 
         
@@ -127,6 +129,7 @@ const main = weather[0].main
         warningContainer.setAttribute('style', 'display:none');
         baseBackground.setAttribute('class', 'rainy-background');
         baseHeader.setAttribute('class', 'rainy-header');
+        notFeelingThisBtn.setAttribute('style', 'display:flex')
     }
 
     if  (description === 'broken clouds' || description === 'scattered clouds' || description === 'overcast clouds' || description === 'cloudy') {
@@ -143,6 +146,7 @@ const main = weather[0].main
         warningContainer.setAttribute('style', 'display:none');
         baseBackground.setAttribute('class', 'cloudy-background');
         baseHeader.setAttribute('class', 'cloudy-header');
+        notFeelingThisBtn.setAttribute('style', 'display:flex')
         
     }
     if  (main === 'Snow' || description === 'snowy') {
@@ -157,6 +161,9 @@ const main = weather[0].main
         hazeContainer.setAttribute('style', 'display:none');
         foggyContainer.setAttribute('style', 'display:none');
         warningContainer.setAttribute('style', 'display:none');
+        baseBackground.setAttribute('class', 'winter-background');
+        baseHeader.setAttribute('class', 'winter-header');
+        notFeelingThisBtn.setAttribute('style', 'display:flex')
     }
 
     if  (description === 'smoke' || description === 'volcanic ash' || description === 'tornado' || description === 'warning') {
@@ -171,8 +178,9 @@ const main = weather[0].main
         hazeContainer.setAttribute('style', 'display:none');
         foggyContainer.setAttribute('style', 'display:none');
         warningContainer.setAttribute('style', 'display:flex');
-        baseBackground.setAttribute('class', 'cloudy-background');
-        baseHeader.setAttribute('class', 'cloudy-header');
+        baseBackground.setAttribute('class', 'warning-background');
+        baseHeader.setAttribute('class', 'warning-header');
+        notFeelingThisBtn.setAttribute('style', 'display:flex')
     }
 
     if  (description === 'dust') {
@@ -187,8 +195,9 @@ const main = weather[0].main
         hazeContainer.setAttribute('style', 'display:none');
         foggyContainer.setAttribute('style', 'display:none');
         warningContainer.setAttribute('style', 'display:none');
-        baseBackground.setAttribute('class', 'cloudy-background');
-        baseHeader.setAttribute('class', 'cloudy-header');
+        baseBackground.setAttribute('class', 'dust-background');
+        baseHeader.setAttribute('class', 'dust-header');
+        notFeelingThisBtn.setAttribute('style', 'display:flex')
     }
 
     if  (description === 'haze') {
@@ -203,8 +212,9 @@ const main = weather[0].main
         hazeContainer.setAttribute('style', 'display:flex');
         foggyContainer.setAttribute('style', 'display:none');
         warningContainer.setAttribute('style', 'display:none');
-        baseBackground.setAttribute('class', 'cloudy-background');
-        baseHeader.setAttribute('class', 'cloudy-header');
+        baseBackground.setAttribute('class', 'haze-background');
+        baseHeader.setAttribute('class', 'haze-header');
+        notFeelingThisBtn.setAttribute('style', 'display:flex')
     }
 
     if  (description === 'mist' || description === 'fog') {
@@ -219,8 +229,9 @@ const main = weather[0].main
         hazeContainer.setAttribute('style', 'display:none');
         foggyContainer.setAttribute('style', 'display:flex');
         warningContainer.setAttribute('style', 'display:none');
-        baseBackground.setAttribute('class', 'cloudy-background');
-        baseHeader.setAttribute('class', 'cloudy-header');
+        baseBackground.setAttribute('class', 'foggy-background');
+        baseHeader.setAttribute('class', 'foggy-header');
+        notFeelingThisBtn.setAttribute('style', 'display:flex')
     }
 
 
