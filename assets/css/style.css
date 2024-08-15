@@ -109,6 +109,16 @@ justify-content: center;
     margin-bottom: 20px;
 }
 
+#weather {
+    font-size: 18px;
+    padding: 15px;
+}
+
+#weather p {
+    line-height: 17px;
+    margin-top: 20px;
+}
+
 #city {
     border-radius: 10px;
     height: 50px;
