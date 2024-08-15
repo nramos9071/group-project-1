@@ -75,6 +75,11 @@ h1 {
     padding: 20px;
 }
 
+h2 {
+    display:flex;
+    justify-content: center;
+}
+
 #h1div {
     display: flex;
     flex-wrap: wrap;
