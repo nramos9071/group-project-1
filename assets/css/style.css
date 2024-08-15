@@ -80,6 +80,11 @@ h2 {
     display:flex;
     justify-content: center;
 }
+ 
+p {
+    display:flex;
+justify-content: center;
+}
 
 #h1div {
     display: flex;
@@ -124,41 +129,58 @@ h2 {
 .rainy-container,
 .sunny-container, 
 .cloudy-container, 
-.winter-container {
+.winter-container,
+.haze-container, 
+.foggy-container,
+.dust-container,
+.warning-container {
     display: flex;
     justify-content: center;
 }
 
+
+
 .sunny-background {
-    background-color: rgb(3, 127, 143);
+    background-color: rgb(24, 167, 186);
+    color: rgb(216, 216, 46)
 
 }
 
 .sunny-header {
-    background-color: rgb(165, 165, 4);
+    background-color: rgb(216, 216, 46);
+    color:rgb(4, 210, 247);
 }
 
 .rainy-background {
-    background-color:rgb(13, 27, 42);
+    background-color:rgb(29, 50, 73);
+    color:rgb(21, 4, 60)
 }
 
 .rainy-header {
-    background-color:rgb(136, 136, 136);
+    background-color:rgb(21, 4, 60);
+    color:rgb(9, 53, 104)
 }
 
 .winter-background {
-    background-color:rgb(255, 255, 255);
+    background-color:rgb(196, 234, 238);
+    color: rgb(29, 45, 48);
 }
 
 .winter-header {
-    background-color:rgb(4, 210, 247);
+    background-color:rgb(29, 45, 48);
+    color: rgb(196, 234, 238);
 }
 
 .cloudy-background {
-    background-color:rgb(29, 39, 50);
+    background-color:rgb(28, 33, 37);
+    color: rgb(65, 64, 66);
 }
 
 .cloudy-header {
+
+    background-color:rgb(65, 64, 66);
+color: rgb(28, 33, 37);
+
     background-color:rgb(47, 12, 94);
 
 }
@@ -180,4 +202,5 @@ footer {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 600;
     font-size: 15px;
+
 }
