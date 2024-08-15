@@ -179,9 +179,63 @@ justify-content: center;
 .cloudy-header {
 
     background-color:rgb(65, 64, 66);
-color: rgb(28, 33, 37);
+    color: rgb(28, 33, 37);
 
     background-color:rgb(47, 12, 94);
+
+}
+
+.dust-background {
+    background-color:rgb(122, 100, 58);
+    color: rgb(65, 64, 66);
+}
+
+.dust-header {
+
+    background-color:rgba(230, 228, 114, 0.849);
+    color: rgb(28, 33, 37);
+
+   
+
+}
+
+.haze-background {
+    background-color:rgb(50, 15, 116);
+    color: rgb(65, 64, 66);
+}
+
+.haze-header {
+
+    background-color:rgb(134, 39, 189);
+    color: rgb(28, 33, 37);
+
+}
+
+.foggy-background {
+    background-color:rgb(28, 33, 37);
+    color: rgb(65, 64, 66);
+}
+
+.foggy-header {
+
+    background-color:rgb(65, 64, 66);
+    color: rgb(28, 33, 37);
+
+   
+
+}
+
+.warning-background {
+    background-color:rgb(156, 13, 13);
+    color: rgb(65, 64, 66);
+}
+
+.warning-header {
+
+    background-color:rgb(192, 79, 27);
+    color: rgb(28, 33, 37);
+
+   
 
 }
 
