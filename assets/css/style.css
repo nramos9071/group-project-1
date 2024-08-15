@@ -153,24 +153,24 @@ justify-content: center;
 
 
 .sunny-background {
-    background-color: rgb(24, 167, 186);
-    color: rgb(216, 216, 46)
+    background-color: rgb(19, 98, 154);
+    color: rgb(229, 229, 97);
 
 }
 
 .sunny-header {
-    background-color: rgb(216, 216, 46);
-    color:rgb(4, 210, 247);
+    background-color: rgb(229, 229, 97);
+    color:rgb(19, 98, 154);
 }
 
 .rainy-background {
-    background-color:rgb(29, 50, 73);
-    color:rgb(21, 4, 60)
+    background-color:rgb(51, 85, 120);
+    color:rgb(21, 4, 60);
 }
 
 .rainy-header {
     background-color:rgb(21, 4, 60);
-    color:rgb(9, 53, 104)
+    color:rgb(51, 85, 120);
 }
 
 .winter-background {
@@ -185,41 +185,39 @@ justify-content: center;
 
 .cloudy-background {
     background-color:rgb(28, 33, 37);
-    color: rgb(65, 64, 66);
+    color: rgb(109, 108, 111);
 }
 
 .cloudy-header {
 
-    background-color:rgb(65, 64, 66);
+    background-color:rgb(109, 108, 111);
     color: rgb(28, 33, 37);
-
-    background-color:rgb(47, 12, 94);
 
 }
 
 .dust-background {
-    background-color:rgb(122, 100, 58);
-    color: rgb(65, 64, 66);
+    background-color:rgb(43, 35, 21);
+    color: rgb(102, 95, 64);
 }
 
 .dust-header {
 
-    background-color:rgba(230, 228, 114, 0.849);
-    color: rgb(28, 33, 37);
+    background-color: rgb(102, 95, 64);
+    color: rgb(43, 35, 21);
 
    
 
 }
 
 .haze-background {
-    background-color:rgb(50, 15, 116);
-    color: rgb(65, 64, 66);
+    background-color:rgb(81, 12, 142);
+    color: rgb(25, 10, 41);
 }
 
 .haze-header {
 
-    background-color:rgb(134, 39, 189);
-    color: rgb(28, 33, 37);
+    background-color:rgb(25, 10, 41);
+    color: rgb(81, 12, 142);
 
 }
 
@@ -239,13 +237,12 @@ justify-content: center;
 
 .warning-background {
     background-color:rgb(156, 13, 13);
-    color: rgb(65, 64, 66);
+    color: rgb(43, 19, 17);
 }
 
 .warning-header {
 
     background-color:rgb(192, 79, 27);
-    color: rgb(28, 33, 37);
 
    
 
